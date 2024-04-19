@@ -1,7 +1,6 @@
 <script setup>
-const baseUrl = 'https://web-anime-psi.vercel.app';
 
-const { pending, data: genres } = await useLazyFetch(`${baseUrl}/genre`)
+const { pending, data: genres } = await useLazyFetch('https://web-anime-psi.vercel.app/genre')
 
 const layout = 'main';
 
@@ -17,7 +16,6 @@ const layout = 'main';
                 {{ genre.judul }}
             </NuxtLink>
         </div>
-
 
         <div v-if="pending" class="">
             <p>bentar mas...</p>
